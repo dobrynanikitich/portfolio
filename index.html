@@ -54,16 +54,24 @@
             </ul>
         </section>
         <section class='sliderSection'>
+            <div id='prevBtn' class='sliderBtn'><i class="fas fa-chevron-left"></i></div>
             <div class="carouselContainer">
                 <div class="carouselSlider">
-                    <div id='lastClone' class='slide2'></div>
-                    <div class='slide1'></div>
-                    <div class='slide2'></div>
-                    <div id='firstClone'class='slide1'></div>
+                    <div id='lastClone' class='slide2 slide'>CLONE LAST!</div>
+                    <div class='slide1 slide'>1
+                        <div class='theyallowInfo'>
+                        </div>
+                        <div class='theyallowScreen'>
+                            <a href='./projects/theyalow/index.html'>
+                                <img src='./assets/images/theyallow-sreen.png' />
+                            </a>
+                        </div>
+                    </div>
+                    <div class='slide2 slide'>2</div>
+                    <div id='firstClone' class='slide1 slide'>CLONE FIRST!</div>
                 </div> 
             </div>
-            <button id='prevBtn'>Prev</button>
-            <button id='nextBtn'>Next</button>
+            <div id='nextBtn' class='sliderBtn'><i class="fas fa-chevron-right"></i></div>
         </section>
         <script src="./src/index.js"></script>   
     </body>

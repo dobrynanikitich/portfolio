@@ -20,7 +20,7 @@ expandBtn.addEventListener('click', showExpandHandler);
 //Implement slider
 
 const carouselSlide = document.querySelector('.carouselSlider');
-const carouselImages = document.querySelectorAll('.carouselSlider div');
+const carouselImages = document.querySelectorAll('.carouselSlider .slide');
 const prevBtn = document.querySelector('#prevBtn');
 const nextBtn = document.querySelector('#nextBtn');
 
@@ -48,6 +48,7 @@ prevBtn.addEventListener('click', () => {
 })
 
 carouselSlide.addEventListener('transitionend', () => {
+    console.log(carouselImages)
     if (carouselImages[counter].id === 'lastClone') {
         carouselSlide.style.transition = 'none';
         counter = carouselImages.length - 2;
