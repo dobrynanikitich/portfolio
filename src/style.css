@@ -103,17 +103,34 @@
     background-color: gold;
 }
 
+.slide {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    align-items: center;
+}
+
+.slide ul h2 {
+    font-size: 50px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.slide ul li {
+    font-size: 23px;
+    line-height: 1.9;
+    list-style: disc;
+}
+
 .slide1 {
     width: 921.6px;
-    height: 250px;
-    background-color: yellow;
     flex-shrink: 0;
+    padding-left: 10px;
+    box-sizing: border-box;
 }
 
 .slide2 {
     width: 921.6px;
-    height: 250px;
-    background-color: red;
     flex-shrink: 0;
 }
 
@@ -127,12 +144,15 @@
     width: 90%;
     margin: auto;
     overflow: hidden;
+    border-top: 3px solid gold;
+    padding: 0px;
+    border-bottom: 3px solid gold;
 }
 
 .carouselSlider {
     display: flex;
     width: 100%;
-    height: 500px;
+    min-height: 350px;
 }
 
 .sliderBtn {
@@ -147,6 +167,21 @@
 
 .sliderBtn i {
     font-size: 50px;
+}
+
+.theyallowScreen img {
+    width: 250px;
+    height: 350px;
+}
+
+.rdpScreen img {
+    width: 240px; 
+    height: 350px;
+}
+
+.rdpScreen p,
+.theyallowScreen p {
+    text-align: right;
 }
 
 
