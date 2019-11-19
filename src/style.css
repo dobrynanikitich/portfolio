@@ -104,15 +104,17 @@
 }
 
 .slide1 {
-    width: 400px;
+    width: 921.6px;
     height: 250px;
     background-color: yellow;
+    flex-shrink: 0;
 }
 
 .slide2 {
-    width: 400px;
+    width: 921.6px;
     height: 250px;
     background-color: red;
+    flex-shrink: 0;
 }
 
 .sliderSection {
@@ -123,10 +125,13 @@
 .carouselContainer {
     width: 90%;
     margin: auto;
+    overflow: hidden;
 }
 
 .carouselSlider {
     display: flex;
+    width: 100%;
+    height: 500px;
 }
 
 
