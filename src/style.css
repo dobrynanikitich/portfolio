@@ -1,0 +1,132 @@
+.container {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0;
+    padding: 0;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.mainHeader {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 0px 0px 3px black;
+    background: gold;
+    margin-bottom: 60px;
+}
+
+.headerImage {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    margin-right: 10%;
+}
+
+.headerImage img {
+    border-radius: 50%;
+    width: 100%;
+}
+
+.headerAuthorInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: navy;
+    width: 40%;
+    text-align: center;
+}
+
+.headerLinksWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerLinksWrapper a {
+    font-size: 40px;
+    color: royalblue; 
+}
+
+.expandEducationBlock {
+    width: 100%;
+    display: flex;
+    background: gold;
+    height: 60px;
+    font-size: 50px;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 0px 3px darkviolet;
+    padding-left: 20px;
+}
+
+.expandBtn {
+    width: 65px;
+    height: 98.69%;
+    background-color: darkviolet;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.expandBtn i {
+    color: white;
+}
+
+.displayNone {
+    display: none;
+}
+
+.expandEducationList li:nth-child(1),
+.expandEducationList li:nth-child(3),
+.expandEducationList li:nth-child(5) {
+    width: 55%;
+    height: 50px;
+    box-sizing: border-box;
+    border: 3px solid darkviolet;
+    padding: 5px 10px;
+    background-color: white;
+}
+
+.expandEducationList li:nth-child(2),
+.expandEducationList li:nth-child(4) {
+    width: 55%;
+    height: 50px;
+    box-sizing: border-box;
+    border: 3px solid darkviolet;
+    padding: 5px 10px;
+    background-color: gold;
+}
+
+.slide1 {
+    width: 400px;
+    height: 250px;
+    background-color: yellow;
+}
+
+.slide2 {
+    width: 400px;
+    height: 250px;
+    background-color: red;
+}
+
+.sliderSection {
+    margin-top: 30px;
+    width: 100%;
+}
+
+.carouselContainer {
+    width: 90%;
+    margin: auto;
+}
+
+.carouselSlider {
+    display: flex;
+}
+
+
