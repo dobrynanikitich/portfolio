@@ -5,7 +5,6 @@
     align-items: center;
     overflow: scroll;
     overflow-x: hidden;
-    background: #0008;
   }
   
   .frame {
@@ -13,7 +12,7 @@
     height: 0;
     width: 100%;
     padding-bottom: 81%;
-    background: #fff;
+    background: white;
   }
   
   .frameContent {
@@ -22,12 +21,12 @@
     left: 0;
   }
   
-  .frameContent .theyalow {
-    height: 1849px;
+  .frameContent.theyalow {
+    height: 1850px;
   }
   
-  .frameContent .rdp {
-    height: 10154.6px;
+  .frameContent.rdp {
+    height: 10126px;
   }
   
   .frameControl {
@@ -68,11 +67,25 @@
   }
 
   .backLink {
-      color: white;
-      text-decoration: none;
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .backLink:hover {
     color: black;
     text-decoration: none;
+  }
+
+  .controlBtnText {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
   }

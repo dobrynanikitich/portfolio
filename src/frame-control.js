@@ -18,7 +18,7 @@ function switchLayout(){
         break;
         case 'rdp':
         frame.style.width = width > 640 ? '375px' : '100%';
-        frameContent.style.height = width > 640 ? '9109px' : '10154.6px';
+        frameContent.style.height = width > 640 ? '9370px' : '10154.6px';
         break;
     }
     changeText(parseFloat(getComputedStyle(frame).width));
