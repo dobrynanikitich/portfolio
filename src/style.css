@@ -74,6 +74,18 @@
     align-items: center;
 }
 
+.expandBtn:hover {
+    background-color: white;
+    color: darkviolet;
+    cursor: pointer;
+}
+
+.expandBtn:hover i{
+    background-color: white;
+    color: darkviolet;
+    cursor: pointer;
+}
+
 .expandBtn i {
     color: white;
 }
@@ -163,6 +175,12 @@
     align-items: center;
     color: white;
     border: 3px solid gold;
+}
+
+.sliderBtn:hover {
+    cursor: pointer;
+    background: white;
+    color: darkviolet;
 }
 
 .sliderBtn i {
