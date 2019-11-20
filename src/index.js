@@ -58,5 +58,45 @@ carouselSlide.addEventListener('transitionend', () => {
         counter = carouselImages.length - counter;
         carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
     }
-})
+});
+
+//implement swiper
+
+const showInfoBtnYellow = document.querySelector('.showSlideInfoMobile1');
+const showInfoBtnRdp = document.querySelector('.showSlideInfoMobile2');
+const yellowInfo = document.querySelector('.theyalowInfoListMobile');
+const rdpInfo = document.querySelector('.rdpInfoListMobile');
+const theYellowPreview = document.querySelector('.theyallowScreenMobile');
+const rdpPreview = document.querySelector('.rdpScreenMobile');
+
+const showInfoYellowHandler = () => {
+    const yellowPreview = document.querySelector('.theyallowScreenMobile');
+    if (yellowInfo.classList.contains('noActive')) {
+        yellowInfo.style.display = 'flex';
+        yellowInfo.classList.remove('noActive');
+        theYellowPreview.classList.add('displayNone');
+    } else {
+        yellowInfo.style.display = 'none';
+        yellowInfo.classList.add('noActive');
+        theYellowPreview.classList.remove('displayNone');
+    }
+}
+
+const showInfoRdbHandler = () => {
+    const rdbPreview = document.querySelector('.rdpInfoListMobile');
+    if (rdpInfo.classList.contains('noActive')) {
+        rdpInfo.style.display = 'flex';
+        rdpInfo.classList.remove('noActive');
+        rdpPreview.classList.add('displayNone');
+    } else {
+        rdpInfo.style.display = 'none';
+        rdpInfo.classList.add('noActive');
+        rdpPreview.classList.remove('displayNone');
+    }
+}
+
+showInfoBtnYellow.addEventListener('click', showInfoYellowHandler);
+showInfoBtnRdp.addEventListener('click', showInfoRdbHandler)
+
+
 
