@@ -3,6 +3,8 @@ const expandEducationList = document.querySelector('.expandEducationList');
 const expandArrow = document.querySelector('.fa-arrow-right');
 
 let isExpanded = false;
+let startSwipeCoords;
+let finishSwipeCoords;
 
 const showExpandHandler = () => {
     isExpanded = !isExpanded;
@@ -62,12 +64,20 @@ carouselSlide.addEventListener('transitionend', () => {
 
 //implement swiper
 
+let mobileCounter = 1;
+let clientX;
+
 const showInfoBtnYellow = document.querySelector('.showSlideInfoMobile1');
 const showInfoBtnRdp = document.querySelector('.showSlideInfoMobile2');
 const yellowInfo = document.querySelector('.theyalowInfoListMobile');
 const rdpInfo = document.querySelector('.rdpInfoListMobile');
 const theYellowPreview = document.querySelector('.theyallowScreenMobile');
 const rdpPreview = document.querySelector('.rdpScreenMobile');
+const mobileCarouselSlider = document.querySelector('.mobileCarouselSlider');
+const carouselImagesMobile = document.querySelectorAll('.mobileCarouselSlider .slideMobile');
+const sizeMobile = carouselImagesMobile[0].clientWidth;
+
+mobileCarouselSlider.style.transform = 'translateX(' + (-sizeMobile * mobileCounter) + 'px)';
 
 const showInfoYellowHandler = () => {
     const yellowPreview = document.querySelector('.theyallowScreenMobile');
@@ -95,8 +105,59 @@ const showInfoRdbHandler = () => {
     }
 }
 
-showInfoBtnYellow.addEventListener('click', showInfoYellowHandler);
-showInfoBtnRdp.addEventListener('click', showInfoRdbHandler)
 
+const makeSwapHandler = (delta) => {
+    if (delta < -1) {
+        mobileCarouselSlider.style.transition = 'transform 0.4s ease-in-out';
+        mobileCounter += 1;
+        mobileCarouselSlider.style.transform = 'translateX(' + (-sizeMobile * mobileCounter) + 'px)';
+    }
+    if (delta > 1) {
+        mobileCarouselSlider.style.transition = 'transform 0.4s ease-in-out';
+        mobileCounter -= 1;
+        mobileCarouselSlider.style.transform = 'translateX(' + (-sizeMobile * mobileCounter) + 'px)';
+    }
+}
+
+const swipeStartHandler = (e) => {
+    // e.preventDefault();
+    clientX =  e.touches[0].clientX
+}
+
+const swipeFinishHandler = (e) => {
+    let delta = e.changedTouches[0].clientX - clientX;
+    makeSwapHandler(delta);
+}
+
+carouselSlide.addEventListener('transitionend', () => {
+    if (carouselImages[counter].id === 'lastClone') {
+        carouselSlide.style.transition = 'none';
+        counter = carouselImages.length - 2;
+        carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+    }
+    if (carouselImages[counter].id === 'firstClone') {
+        carouselSlide.style.transition = 'none';
+        counter = carouselImages.length - counter;
+        carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+    }
+});
+
+mobileCarouselSlider.addEventListener('transitionend', () => {
+    if (carouselImagesMobile[mobileCounter].id === 'lastCloneMobile') {
+        mobileCarouselSlider.style.transition = 'none';
+        mobileCounter = carouselImagesMobile.length - 2;
+        mobileCarouselSlider.style.transform = 'translateX(' + (-sizeMobile * mobileCounter) + 'px)';
+    }
+    if (carouselImagesMobile[mobileCounter].id === 'firstCloneMobile') {
+        mobileCarouselSlider.style.transition = 'none';
+        mobileCounter = carouselImagesMobile.length - mobileCounter;
+        mobileCarouselSlider.style.transform = 'translateX(' + (-sizeMobile * mobileCounter) + 'px)';
+    }
+});
+
+showInfoBtnYellow.addEventListener('click', showInfoYellowHandler);
+showInfoBtnRdp.addEventListener('click', showInfoRdbHandler);
+mobileCarouselSlider.addEventListener('touchstart', swipeStartHandler);
+mobileCarouselSlider.addEventListener('touchend', swipeFinishHandler);
 
 

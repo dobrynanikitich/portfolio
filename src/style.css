@@ -226,6 +226,7 @@
 .slideMobile {
     width: 375px;
     height: 578px;
+    flex-shrink: 0;
 }
 
 .slideMobile img {
