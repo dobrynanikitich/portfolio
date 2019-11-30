@@ -247,5 +247,3 @@ showInfoBtnYellow.addEventListener('click', showInfoYellowHandler);
 showInfoBtnRdp.addEventListener('click', showInfoRdbHandler);
 mobileCarouselSlider.addEventListener('touchstart', swipeStartHandler);
 mobileCarouselSlider.addEventListener('touchend', swipeFinishHandler);
-
-
